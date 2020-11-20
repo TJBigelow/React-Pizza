@@ -1,11 +1,17 @@
-import React, { Component } from 'react';
-import Pizza from '../components/Pizza'
+import React, { Component } from "react";
+import Pizza from "../components/Pizza";
 class PizzaList extends Component {
   renderPizzas = () => {
-    return this.props.pizzas.map(pizza => {
-      return <Pizza key={pizza.id} pizza={pizza} setCurrentPizza={this.props.setCurrentPizza} />
-    })
-  }
+    return this.props.pizzas.map((pizza) => {
+      return (
+        <Pizza
+          key={pizza.id}
+          pizza={pizza}
+          setCurrentPizza={this.props.setCurrentPizza}
+        />
+      );
+    });
+  };
 
   render() {
     return (
@@ -18,15 +24,10 @@ class PizzaList extends Component {
             <th scope="col">Edit</th>
           </tr>
         </thead>
-        <tbody>
-          {
-            this.renderPizzas()
-          }
-        </tbody>
+        <tbody>{this.renderPizzas()}</tbody>
       </table>
     );
   }
-
 }
 
 export default PizzaList;

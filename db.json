@@ -9,8 +9,8 @@
     {
       "id": 2,
       "topping": "Pepperoni",
-      "size": "Small",
-      "vegetarian": false
+      "size": "Large",
+      "vegetarian": true
     },
     {
       "id": 3,
